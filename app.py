@@ -19,8 +19,25 @@ def get_recipes():
     return render_template("recipes.html", 
     recipes=mongo.db.the_recipes.find())
 
+
     
 
+@app.route('/recipe_content')    
+def recipe_content():
+    return render_template("recipe_content.html",
+    recipes=mongo.db.the_recipes.find())
+
+
+
+@app.route('/categories', methods=['GET'])  
+def search_by_category():
+    return render_template("categories.html",
+    recipes=mongo.db.categories.find())
+
+
+
+    
+    
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
         port=int(os.environ.get('PORT')),

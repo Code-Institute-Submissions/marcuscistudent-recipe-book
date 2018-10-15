@@ -1,31 +1,27 @@
-{% extends 'base.html' %}
-{% block content %}
-
-
-    <div class="container">
-            <h1>Recipes</h1>
-            <h2>Search for a Recipe </h2>
-            <div>
-                <!-- FORM -->
-                <form action="{{ url_for('recipe_content') }}" method="GET" target="_blank" class="form-inline">
-                    <input type="text" class="form-control" placeholder="Recipe" name="find_recipe" id="find_recipe" autofocus>
-                    <button class="btn btn-danger">Search </button>
-                </form>
-            </div>
-        </div>
-    </div>
-    <div class="push"></div>
-    </div>
-        
-        
-        
+{% extends 'base.html'%} {% block content %}
+<div class="row">
+    <ul class="collapsible" data-collapsible="accordion">
         {% for recipe in recipes %}
-        
-       
-<div id="full_recipe" class="vertical-text"></div>    
-        {{recipe.recipe_name}}
-
-   
-
+        <li>
+            <div class="collapsible-header">
+                <div class="col s3">
+                    <i class="material-icons">expand_more</i>
+                    <a class="waves-effect waves-light btn btn_small">Done</a>
+                    <a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
+                    
+                </div>
+                <div class=" task_header col s9">
+                    <strong>{{recipe.recipe_name}}</strong>
+                </div>
+            </div>
+            <div class="collapsible-body">
+                <span>
+                {{recipe.ingredients}} 
+            </span>
+            </div>
+        </li>
         {% endfor %}
-        {% endblock %}
+
+    </ul>
+</div>
+{% endblock %}

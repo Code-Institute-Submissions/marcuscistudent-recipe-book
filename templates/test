@@ -1,0 +1,45 @@
+"""the code resipe search"""
+
+
+@app.route('/search_all')
+def search_all():
+    recipes=mongo.db.the_recipes.find()
+
+
+    
+"""html"""
+
+
+<div class="search-bar">
+  <input type="text" placeholder="Search..">
+</div>
+
+
+
+
+
+
+
+
+"""the code search by category"""
+
+@app.route('/search_category')
+def search_all(recipes):
+all_recipes = recipes=mongo.db.the_recipes
+for recipe in all_recipes: 
+    if (recipe["category_name"]=="fish"):
+        print recipe
+     
+     
+        
+"""html"""
+
+<div class="search-bar">
+  <input type="text" placeholder="Search..">
+</div>
+
+
+
+
+"""how do I make each recie have a url that opens a to page representing resipe category, method, ingredients
+

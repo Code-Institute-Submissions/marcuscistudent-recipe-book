@@ -6,41 +6,35 @@
 <div class="col-md-4">
   <form method="POST" action="{{ url_for('index') }}" class="form-inline">
     <input type="text" class="form-control" placeholder="Search Recipe By Name" name="recipe_name" id="recipe_name" autofocus>
-    <button class="btn btn-danger">search</button>
+    <button class="btn btn-danger indigo lighten-2">search</button>
   </form>
 </div>
 
-<div class="row">
-    <ul class="collapsible" data-collapsible="accordion">
+<table>
+        <thead>
+          <tr>
+              <th>Name</th>
+              <th>Category</th>
+              <th>Ingredients</th>
+              <th>Method</th>
+              <th>Edit/Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{the_recipe.recipe_name}}</td>
+            <td>{{the_recipe.category_name}}</td>
+            <td>{{the_recipe.ingredients}}</td>
+            <td>{{the_recipe.method}}</td>
+            <td><a href="{{url_for('edit_recipe', recipe_id=the_recipe._id)}}" class="waves-effect waves-light btn btn_small indigo lighten-2">Edit</a></td>
+            <td><a href="{{url_for('delete_recipe', recipe_id=the_recipe._id)}}" class="waves-effect waves-light btn btn_small red lighten-2">Delete</a></td>
+            <td><a href="{{url_for('view_recipe', recipe_id=the_recipe._id)}}" class="waves-effect waves-light btn btn_small light-green lighten-1">View</a></td>
+          </tr>
+
+
+</tbody>
+      </table>
       
-        <li>
-            <div class="collapsible-header">
-                <div class="col s3">
-                    <i class="material-icons">expand_more</i>
-                    <a href="{{url_for('delete_recipe', recipe_id=the_recipe._id)}}" class="waves-effect waves-light btn btn_small blue">Delete</a>
-                    <a href="{{url_for('edit_recipe', recipe_id=the_recipe._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
-                    
-                </div>
-                <div class=" task_header col s9">
-                    <strong>{{the_recipe.recipe_name}}</strong>
-                    
-                </div>
-            </div>
-            <div class="collapsible-body">
-                <span>
-                    <h5>Category</h5>
-                {{the_recipe.category_name}}
-                <br>
-                    <h5>Ingredients</h5>
-                {{the_recipe.ingredients}} 
-                <br>
-                    <h5>Method</h5>
-                {{the_recipe.method}} 
-            </span>
-            </div>
-        </li>
-    </ul>
-</div>
 {% endblock %}
 
 

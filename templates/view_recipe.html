@@ -16,8 +16,7 @@
             <td>{{recipe.category_name}}</td>
             <td>{{recipe.ingredients}}</td>
             <td>{{recipe.method}}</td>
-            <td><a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small indigo lighten-2">Edit</a></td>
-            <td><a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small red lighten-2">Delete</a></td>
+            <td><a href="{{url_for('edit_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small indigo lighten-2">Edit</a><a href="{{url_for('delete_recipe', recipe_id=recipe._id)}}" class="waves-effect waves-light btn btn_small red lighten-2">Delete</a></td>
           </tr>
 
 

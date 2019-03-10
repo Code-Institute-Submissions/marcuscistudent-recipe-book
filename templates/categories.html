@@ -1,4 +1,6 @@
-{% extends 'base.html'%} {% block content %}
+{% extends 'base.html'%} {% block header %}
+<body>
+  <div class="wrapper">
 
 <div class="row">
 
@@ -27,5 +29,11 @@
     <a href="{{url_for('new_category')}}" class="waves-effect waves-light btn light-green lighten-1">
         <i class="material-icons right">playlist_add</i>Add Category</a>
 </div>
+<div class="push"></div>
+  </div>
+  <footer class="footer"></footer>
+</body>
 
 {% endblock %}
+
+{% block footer %} {% endblock %}

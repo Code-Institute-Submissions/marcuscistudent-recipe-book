@@ -1,0 +1,20 @@
+html, body {
+    background-image: url("/static/assets/vegetables-1085063_640.jpg");
+    background-size: cover;
+
+    font-weight: bold;
+
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+.footer,
+.push {
+  height: 50px;
+}

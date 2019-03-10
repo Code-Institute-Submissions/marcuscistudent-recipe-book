@@ -1,5 +1,6 @@
-{% extends 'base.html'%} {% block content %}
-
+{% extends 'base.html'%} {% block header %}
+<body>
+  <div class="wrapper">
 <h4>Edit Category</h4>
 <div class="row">
     <form action="{{ url_for('update_category', category_id=category._id) }}" method="POST" class="col s12">
@@ -20,5 +21,11 @@
             </button>
         </div>
 </div>
+<div class="push"></div>
+  </div>
+  <footer class="footer"></footer>
+</body>
 
 {% endblock %}
+
+{% block footer %} {% endblock %}

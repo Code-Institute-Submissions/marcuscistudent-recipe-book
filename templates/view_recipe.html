@@ -1,5 +1,6 @@
-{% extends 'base.html'%} {% block content %}
-
+{% extends 'base.html'%} {% block header %}
+<body>
+  <div class="wrapper">
 <table>
         <thead>
           <tr>
@@ -24,8 +25,13 @@
       </table>
 
 
-
+<div class="push"></div>
+  </div>
+  <footer class="footer"></footer>
+</body>
 
 
 
 {% endblock %}
+
+{% block footer %} {% endblock %}

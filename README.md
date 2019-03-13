@@ -16,8 +16,8 @@ where users can share their recipes and find new ones that the havent used befor
 The ingredients background was used to draw the users attention while the menu
 was designed for ease of access and to be respinsive on multiple devices.
 
-![Mobile]( "Mobile")
-![Desktop]( "Desktop")
+![Mobile](https://github.com/marcuscistudent/recipe-book/blob/master/static/assets/mobile2.png "Mobile")
+![Desktop](https://github.com/marcuscistudent/recipe-book/blob/master/static/assets/desktop2.png "Desktop")
 
 ## Technologies used
 1. HTML

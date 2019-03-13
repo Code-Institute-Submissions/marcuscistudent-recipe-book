@@ -1,54 +1,105 @@
-recipe-book
+# Recipe Book
 
-The recipe-book was created so that users could use CRUD for food recipes.
-users can also search the database for recipes by name and by category.
+The website is a recipe book that enables users to use CRUD functionality for food recipes.
 
-The recipe-book app uses Python, javascript, html and css and some frameworks
-within the languages stated. The header, footer and body of the
-apps has been styled using materialize and a sticky footer has been used
-to push the footer to the bottom. The background image was taken from pixabay
-and the opacity wasj changed using GIMP.
-
-UX
-
-The website is for anyone who wants to keep track of recipes they have found by adding them
-to the database and also for people who dont have any ideas of what to cook so they
-can come to the app for some insporation. It is also useful for people who have a 
-product/meal in mind but dont know of a recipe. they can search for a recipe for that meal.
-
-Features
-
-The Features of this app are the view all recipes page which displays all recipes that have been added to the database,
-the  add recipe page which allows users to create a new recipe and add it to the databse.
-The edit recpie function so that any existing recipe can be changed and updated
-the edit category and add category pages are useful to help users search for recipes by category
-which is useful if the cant find the correct name of a recipe
-The main function of the recipe-book is the search function,
-users can query the databse and search by recipe name or by category.
-There is also the option to view the recipe on its own page so that you can
-see the entire contect of the recipe such as method and ingredients.
-
-I would like to implement a register, login and logout function and then also improve
-the search function to search for many items and also query letters in a recipe name
-
-Technologies used
-
-The technologies used are HTML CSS and Python. I used the flask framework to render my templates, 
-pymongo to access my mongodb databse on Mlab using python.
-
-I used JINJA to render my python code on my html page and then I used materialize to syle my
-recipe book and icons to make the navigation bar look more proffessional and then Jquery
-to create a responsive menu that changes to dropdown when screen size is reduced.
-
-I used UnitTest to test the the pages are rendered correcly using flask and I have tested extensively the search
-and display fucntions to make sure that the ID matches and that no errors occur.
-
-Deployment
-
-The app has been pushed to gihub and delpoyed in Heroku. I created a requirements.txt file a Procfile
-and I scaled my dynos and inserted the IP and PORT into the config vars in heroku so that the app would push correcty.
+The website enables users to search the database for recipes as well as view them,
+edit them and delete them.
 
 
-The app is run by entering python3 app.y into the terminal or hitting the run button on the app.py page and then clicking
-on the link generated in the terminal.
+## The site can be viewed [here](https://recipebook-project.herokuapp.com/).
+
+## UX
+
+The website is designed to look appealing to users and to be an interactive community
+where users can share their recipes and find new ones that the havent used before.
+
+The ingredients background was used to draw the users attention while the menu
+was designed for ease of access and to be respinsive on multiple devices.
+
+![Mobile]( "Mobile")
+![Desktop]( "Desktop")
+
+## Technologies used
+1. HTML
+2. CSS
+3. Python
+4. Flask
+5. MongoDB
+6. Materialize
+7. Jquery
+
+
+## Features
+
+The website uses Materialize and Jquery for the responsive menu and the responsive grid
+layout.
+
+Google API icons were used to style the menu.
+
+The search, edit, delete and add functions were coded using Flask and have seperate pages.
+
+There is a search function and the option to search by recipe name or by
+category name.
+
+When the CRUD functions are used, the Mlab databse is update and the functions are stored.
+
+
+### Features left to implement
+
+The ability to upload images to each recipe is needed to add to the visuals of the website.
+
+The ability to register, login and logout would be useful so that it is visible who
+has created each recipe and to be able to remove CRUD functionality from all recipes
+except your own.
+
+## Testing
+
+Unittest was used to test that all pages render correctly. To run the Unittest
+enter ```python3 test.py``` into the terminal to see that all 7 tests pass.
+
+The tests run can be found in the test.py file inside the home directory.
+
+The load time was reduced by redicing the background image size on GIMP and
+minifying the file on [CompressJPG](https://compressjpeg.com/).
+
+The site is responsive on Mobile, Ipad and Desktop devices and also functions on multiple
+browsers including FireFox, IE and Chrome.
+
+User input errors have been tested by entering different values into the search
+functions and by following links to navigate through the website and using the previous
+and next page browser functions.
+
+
+## Deployment
+
+The app has been pushed to GitHub and delpoyed in Heroku. A requirements.txt file, a Procfile
+and dynos were scaled. The IP and PORT used to run the website was
+inserted into the config vars in heroku so that the app would push correcty.
+
+The app is run by entering python3 app.py into the terminal or pressing the run button 
+on the app.py page and then clicking on the link generated in the terminal.
+
+To run the repository locally, you can download the files and upload them
+to the editor of your choice or enter this into your terminal
+```git clone https://github.com/marcuscistudent/recipe-book.git```.
+Then install the requirements by entering this into your terminal ```pip install -r requirements.txt```.
+
+## Credits
+
+### Content
+All written content is original with the exception of the 
+recipe data which was taken from [here](https://www.bbcgoodfood.com/).
+
+### Media
+The Image was taken from [Pxhere](https://pxhere.com/).
+
+GIMP was used to resize the background image and to reduce the image opacity.
+
+
+### Acknowledgements
+
+The responsive menu was found [here](https://materializecss.com/).
+
+I used [CSS Tricks](https://css-tricks.com) to create a sticky footer.
+
 

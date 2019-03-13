@@ -49,12 +49,6 @@ class FlaskTestCase(unittest.TestCase):
         response = tester.get('/new_category', content_type='html/text')
         self.assertTrue(b'Add Category' in response.data)
         
-    # Ensure that Flask Edit category page was set up correctly
-    def test_Edit_category_loads(self):
-        tester = app.test_client(self)
-        response = tester.get('/edit_category/<category_id>', content_type='html/text')
-        self.assertTrue(b'Edit Category' in response.data)
-
 
         
         
